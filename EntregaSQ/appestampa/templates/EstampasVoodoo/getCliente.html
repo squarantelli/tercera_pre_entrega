@@ -1,0 +1,23 @@
+<div>
+    {% extends "EstampasVoodoo/inicio.html" %}
+    {% load static %}
+    
+    {% block bloqueDinamico %}
+        {% block getCliente %}
+            <p>Buscar Cliente</p>
+            <form action="/EstampasVoodoo/searchCliente/" method="GET">
+                <input placeholder="Nombre" type="text" name="nombre" id="nombre">
+                <input type="submit" value="Buscar">
+            </form>
+
+            {% if clientes %}
+                {% for cliente in clientes %}
+                    <li> {{cliente.nombre}} </li>
+                    <li> {{cliente.apellido}} </li>
+                    <li> {{cliente.telefono}} </li>
+                    <li> {{cliente.email}} </li>
+                {% endfor %}
+            {% endif %}
+        {% endblock %}
+    {% endblock %}    
+</div>

@@ -1,0 +1,22 @@
+<div>
+    {% extends "EstampasVoodoo/inicio.html" %}
+    {% load static %}
+    
+    {% block bloqueDinamico %}
+        {% block getRemera %}
+            <p>Buscar Remera</p>
+            <form action="/EstampasVoodoo/searchRemera/" method="GET">
+                <input placeholder="Nombre" type="text" name="nombre" id="nombre">
+                <input type="submit" value="Buscar">
+            </form>
+
+            {% if remeras %}
+                {% for remera in remeras %}
+                    <li> {{remera.codigo}} </li>
+                    <li> {{remera.nombre}} </li>
+                    <li> {{remera.talle}} </li>
+                {% endfor %}
+            {% endif %}
+        {% endblock %}
+    {% endblock %}    
+</div>

@@ -1,0 +1,45 @@
+<div>
+    {% extends "EstampasVoodoo/inicio.html" %}
+    {% load static %}
+    
+        {% block bloqueDinamico %}
+            <!-- about section start -->
+            <div class="about_section layout_padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="about_taital_main">
+                            <div class="about_taital">Remeras</div>
+                            <p class="about_text">$9.999-</p>
+                            <p class="about_text">Descripción del artículo</p>
+                            <div class="read_bt"><a href="#">Ver mas</a></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="about_img"><img src="{% static 'EstampasVoodoo/assets/testRemera.png'%}"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- about section end -->
+            <div class="about_section layout_padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="about_taital_main">
+                            <div class="about_taital">Crear Remera</div>
+                            <p class="about_text">Texto para cambiar posiblemente</p>
+                            <p class="about_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.Lorem Ipsum is simply</p>
+                            <div class="read_bt"><a href="{% url 'setRemera' %}">Crear Remera</a></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="about_taital_main">
+                            <div class="about_taital">Buscar Remera</div>
+                            <p class="about_text">Texto para cambiar posiblemente</p>
+                            <p class="about_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.Lorem Ipsum is simply</p>
+                            <div class="read_bt"><a href="{% url 'getRemera' %}">Buscar Remera</a></div>
+                            </div>
+                        </div>
+        {% endblock %}
+</div>

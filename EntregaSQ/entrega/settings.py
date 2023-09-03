@@ -50,7 +50,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'Tercera-pre-entrega-squarantelli.urls'
+ROOT_URLCONF = 'entrega.urls'
 
 TEMPLATES = [
     {
@@ -67,7 +67,7 @@ TEMPLATES = [
         },
 ]
 
-WSGI_APPLICATION = 'Tercera-pre-entrega-squarantelli.wsgi.application'
+WSGI_APPLICATION = 'entrega.wsgi.application'
 
 
 # Database
